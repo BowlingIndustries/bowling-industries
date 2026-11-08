@@ -5,7 +5,7 @@
 
 :root {
     --blue: #A6D2EB;
---blue-dark: #8BBFDF;
+    --blue-dark: #8BBFDF;
     --white: #FFFFFF;
     --grey: #E9EDF0;
     --text: #263746;
@@ -102,6 +102,11 @@ a {
     opacity: 0.55;
 }
 
+.main-nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
 
 /* GENERAL */
 
@@ -116,6 +121,10 @@ a {
 
 .section-blue {
     background: var(--blue);
+}
+
+.section-grey {
+    background: var(--grey);
 }
 
 .eyebrow {
@@ -383,6 +392,33 @@ h2 {
 }
 
 
+/* HOMEPAGE CHARTER PREVIEW */
+
+.charter-preview {
+    padding: 140px 0;
+}
+
+.charter-preview-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 85px;
+    margin-top: 65px;
+    align-items: start;
+}
+
+.charter-preview h2 {
+    font-size: clamp(43px, 5vw, 67px);
+}
+
+.charter-preview-copy p {
+    max-width: 430px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+
 /* FOOTER */
 
 .site-footer {
@@ -410,6 +446,19 @@ h2 {
     letter-spacing: 0.25em;
 }
 
+.footer-charter-link {
+    margin-top: 5px;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    color: var(--muted);
+    transition: opacity 0.25s ease;
+}
+
+.footer-charter-link:hover {
+    opacity: 0.55;
+}
+
 .site-footer > span {
     margin-top: 24px;
     font-size: 8px;
@@ -418,7 +467,363 @@ h2 {
 }
 
 
-/* SCROLL REVEAL */
+/* --------------------------------
+   FOUNDING CHARTER
+-------------------------------- */
+
+
+/* CHARTER HERO */
+
+.charter-inner {
+    width: min(1000px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.charter-hero {
+    padding: 115px 0 65px;
+}
+
+.charter-hero h1 {
+    font-size: clamp(65px, 10vw, 120px);
+    margin-top: 55px;
+}
+
+.charter-hero-description {
+    max-width: 510px;
+    margin-top: 35px;
+    font-size: 15px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+.charter-hero-index {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 125px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+
+
+/* OPENING DECLARATION */
+
+.charter-opening {
+    padding: 145px 0;
+}
+
+.charter-opening-copy {
+    max-width: 760px;
+    margin: 45px 0 0;
+}
+
+.charter-opening-copy p,
+.charter-copy p,
+.charter-philosophy-copy p {
+    max-width: 680px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 2.1;
+    color: var(--muted);
+}
+
+.charter-opening-copy .charter-lead,
+.charter-copy .charter-lead {
+    font-size: 21px;
+    font-weight: 300;
+    letter-spacing: -0.035em;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+
+/* TABLE OF CONTENTS */
+
+.charter-contents {
+    padding: 115px 0 130px;
+}
+
+.charter-contents h2 {
+    margin-top: 40px;
+    font-size: clamp(42px, 5vw, 65px);
+}
+
+.contents-list {
+    margin-top: 65px;
+    border-top: 1px solid var(--line);
+}
+
+.contents-list a {
+    display: grid;
+    grid-template-columns: 65px 1fr 25px;
+    align-items: center;
+    gap: 20px;
+    min-height: 75px;
+    border-bottom: 1px solid var(--line);
+    transition: padding 0.25s ease;
+}
+
+.contents-list a:hover {
+    padding-left: 12px;
+}
+
+.contents-list a span:first-child,
+.contents-list a span:last-child {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.contents-list a span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contents-list a span:last-child {
+    text-align: right;
+    font-size: 15px;
+}
+
+
+/* CHARTER SECTIONS */
+
+.charter-section {
+    padding: 135px 0;
+    scroll-margin-top: 30px;
+}
+
+.charter-section-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 85px;
+    margin-top: 65px;
+    align-items: start;
+}
+
+.charter-section-layout h2 {
+    font-size: clamp(43px, 5.5vw, 70px);
+}
+
+.charter-copy {
+    padding-top: 8px;
+}
+
+.charter-copy p {
+    font-size: 13px;
+}
+
+.charter-emphasis {
+    margin-top: 35px;
+    font-size: 17px !important;
+    font-weight: 400;
+    color: var(--text) !important;
+}
+
+
+/* PHILOSOPHY */
+
+.charter-philosophy {
+    padding: 140px 0 150px;
+}
+
+.charter-philosophy h2 {
+    margin-top: 55px;
+    font-size: clamp(65px, 10vw, 115px);
+    line-height: 1.03;
+}
+
+.charter-philosophy-copy {
+    max-width: 620px;
+    margin: 65px 0 0 auto;
+}
+
+.charter-philosophy-copy p {
+    font-size: 14px;
+}
+
+
+/* PRINCIPLES */
+
+.charter-wide-heading {
+    margin-top: 55px;
+    font-size: clamp(45px, 6vw, 75px);
+}
+
+.charter-principles {
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+}
+
+.charter-principles article {
+    display: grid;
+    grid-template-columns: 55px 0.9fr 1fr;
+    gap: 35px;
+    align-items: start;
+    padding: 38px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.charter-principles article > span {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.charter-principles h3 {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.035em;
+}
+
+.charter-principles p {
+    max-width: 430px;
+    font-size: 12px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+
+/* FIELDS OF INTEREST */
+
+.charter-fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 65px;
+    margin-top: 80px;
+    border-top: 1px solid var(--line);
+}
+
+.charter-fields > div {
+    padding: 35px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.charter-fields span {
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.charter-fields h3 {
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.5;
+}
+
+.charter-fields p {
+    max-width: 360px;
+    margin-top: 13px;
+    font-size: 12px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.charter-disclaimer {
+    margin-top: 35px;
+    max-width: 600px;
+    font-size: 10px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+
+/* FOUNDERS */
+
+.founders-section {
+    padding: 145px 0;
+}
+
+.founders-section > .charter-inner > h2 {
+    margin-top: 55px;
+    font-size: clamp(45px, 6vw, 75px);
+}
+
+.founders-introduction {
+    max-width: 470px;
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+.founder-statement {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 70px;
+    padding: 55px 0;
+    border-top: 1px solid var(--line);
+}
+
+.founders-introduction + .founder-statement {
+    margin-top: 85px;
+}
+
+.founder-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.founder-heading > span {
+    padding-top: 5px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+}
+
+.founder-heading h3 {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+}
+
+.founder-heading p {
+    margin-top: 10px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.founder-statement blockquote {
+    max-width: 650px;
+    font-size: 14px;
+    line-height: 2.1;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+
+/* CHARTER CLOSING */
+
+.charter-closing {
+    padding: 145px 0;
+}
+
+.charter-closing h2 {
+    margin-top: 50px;
+    font-size: clamp(65px, 10vw, 115px);
+}
+
+.charter-closing p:not(.eyebrow) {
+    margin-top: 30px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--muted);
+}
+
+.charter-closing .text-link {
+    margin-top: 45px;
+}
+
+
+/* --------------------------------
+   SCROLL REVEAL
+-------------------------------- */
 
 .js-ready .reveal {
     opacity: 0;
@@ -434,9 +839,12 @@ h2 {
 }
 
 
-/* ACCESSIBILITY */
+/* --------------------------------
+   ACCESSIBILITY
+-------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
@@ -456,10 +864,13 @@ h2 {
 }
 
 
-/* RESPONSIVE */
-
+/* --------------------------------
+   RESPONSIVE DESIGN
+-------------------------------- */
 
 @media (max-width: 760px) {
+
+    /* HEADER */
 
     .site-header {
         padding-top: 30px;
@@ -475,13 +886,16 @@ h2 {
     }
 
     .main-nav {
-        gap: 20px;
+        gap: 16px;
         margin-top: 30px;
     }
 
     .main-nav a {
-        font-size: 10px;
+        font-size: 9px;
     }
+
+
+    /* HOMEPAGE */
 
     .hero {
         min-height: 570px;
@@ -504,7 +918,8 @@ h2 {
     .intro,
     .research,
     .approach,
-    .contact {
+    .contact,
+    .charter-preview {
         padding: 95px 0;
     }
 
@@ -552,13 +967,178 @@ h2 {
         gap: 25px;
     }
 
-    /* Supporting text */
     .intro-layout p,
     .approach-layout p,
     .contact-layout p,
     .principles p {
         font-size: 16px;
         line-height: 1.8;
+    }
+
+    .charter-preview-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 45px;
+    }
+
+    .charter-preview h2 {
+        font-size: clamp(40px, 10vw, 58px);
+    }
+
+    .charter-preview-copy p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+
+    /* CHARTER */
+
+    .charter-inner {
+        width: calc(100% - 50px);
+    }
+
+    .charter-hero {
+        padding: 90px 0 35px;
+    }
+
+    .charter-hero h1 {
+        font-size: clamp(55px, 13vw, 85px);
+        margin-top: 45px;
+    }
+
+    .charter-hero-description {
+        font-size: 14px;
+    }
+
+    .charter-hero-index {
+        margin-top: 90px;
+        font-size: 8px;
+    }
+
+    .charter-opening,
+    .charter-contents,
+    .charter-section,
+    .founders-section {
+        padding: 95px 0;
+    }
+
+    .charter-opening-copy {
+        margin-top: 45px;
+    }
+
+    .charter-opening-copy p,
+    .charter-copy p,
+    .charter-philosophy-copy p {
+        font-size: 15px;
+        line-height: 1.95;
+    }
+
+    .charter-opening-copy .charter-lead,
+    .charter-copy .charter-lead {
+        font-size: 19px;
+    }
+
+    .charter-contents h2,
+    .charter-section-layout h2,
+    .charter-wide-heading,
+    .founders-section > .charter-inner > h2,
+    .charter-preview h2 {
+        font-size: clamp(40px, 10vw, 58px);
+    }
+
+    .contents-list {
+        margin-top: 45px;
+    }
+
+    .contents-list a {
+        grid-template-columns: 35px 1fr 20px;
+        gap: 10px;
+        min-height: 72px;
+    }
+
+    .contents-list a span:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .charter-section-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 45px;
+    }
+
+    .charter-philosophy {
+        padding: 100px 0;
+    }
+
+    .charter-philosophy h2,
+    .charter-closing h2 {
+        font-size: clamp(55px, 12vw, 80px);
+    }
+
+    .charter-philosophy-copy {
+        margin-top: 45px;
+    }
+
+    .charter-principles {
+        margin-top: 55px;
+    }
+
+    .charter-principles article {
+        grid-template-columns: 30px 1fr;
+        gap: 15px;
+        padding: 30px 0;
+    }
+
+    .charter-principles article p {
+        grid-column: 2;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .charter-principles h3 {
+        font-size: 17px;
+    }
+
+    .charter-fields {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 55px;
+    }
+
+    .charter-fields > div {
+        padding: 30px 0;
+    }
+
+    .charter-fields h3 {
+        margin-top: 15px;
+    }
+
+    .charter-fields p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .founder-statement {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0;
+    }
+
+    .founders-introduction + .founder-statement {
+        margin-top: 55px;
+    }
+
+    .founder-statement blockquote {
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    .founder-heading h3 {
+        font-size: 17px;
+    }
+
+    .charter-closing {
+        padding: 100px 0;
     }
 }
 
@@ -570,15 +1150,211 @@ h2 {
     }
 
     .main-nav {
-        gap: 12px;
+        gap: 11px;
     }
 
     .main-nav a {
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .hero-index span:last-child {
         max-width: 150px;
         text-align: right;
     }
+
+    .charter-hero-index {
+        gap: 15px;
+        font-size: 7px;
+    }
+
+    .contents-list a span:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+/* FOUNDING SIGNATURES */
+
+.charter-signatures {
+    padding: 145px 0;
+}
+
+.charter-signatures h2 {
+    margin-top: 50px;
+    font-size: clamp(45px, 6vw, 75px);
+}
+
+.signature-introduction {
+    max-width: 480px;
+    margin-top: 25px;
+    font-size: 13px;
+    line-height: 2;
+    color: var(--muted);
+}
+
+.signature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 75px 85px;
+    margin-top: 100px;
+}
+
+.signature-card {
+    min-width: 0;
+}
+
+.signature-card img {
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    height: 90px;
+    object-fit: contain;
+    object-position: left bottom;
+    margin-bottom: 15px;
+}
+
+.signature-placeholder {
+    height: 105px;
+}
+
+.signature-line {
+    width: 100%;
+    border-bottom: 1px solid var(--line);
+}
+
+.signature-card h3 {
+    margin-top: 17px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.signature-card p {
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--muted);
+}
+
+.signature-closing {
+    margin-top: 110px;
+    padding-top: 25px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+.signature-closing p {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+}
+
+@media (max-width: 760px) {
+    .charter-signatures {
+        padding: 95px 0;
+    }
+
+    .signature-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        margin-top: 65px;
+    }
+
+    .signature-card img {
+        max-width: 240px;
+    }
+
+    .signature-closing {
+        margin-top: 75px;
+    }
+}
+
+
+/* --------------------------------
+   PROJECT DIRECTORY
+-------------------------------- */
+.projects-hero { padding: 115px 0 65px; }
+.projects-hero h1 { margin-top: 55px; font-size: clamp(65px, 10vw, 120px); }
+.projects-hero-description { max-width: 520px; margin-top: 35px; font-size: 15px; line-height: 2; color: var(--muted); }
+.projects-hero-index { display:flex; justify-content:space-between; margin-top:125px; padding-top:18px; border-top:1px solid var(--line); font-size:9px; letter-spacing:.15em; color:var(--muted); }
+.projects-intro { padding:140px 0; }
+.projects-intro-layout,.home-projects-layout { display:grid; grid-template-columns:1fr .75fr; gap:85px; margin-top:65px; align-items:start; }
+.projects-intro h2,.home-projects h2 { font-size:clamp(43px,5vw,67px); }
+.projects-intro-layout p,.home-projects-copy p { max-width:440px; font-size:13px; line-height:2; color:var(--muted); }
+.project-directory { padding:130px 0 145px; }
+.project-entry { display:block; margin-top:55px; padding:28px 0 35px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); transition:padding .25s ease; }
+.project-entry:hover { padding-left:12px; }
+.project-entry-top { display:flex; justify-content:space-between; gap:20px; font-size:9px; letter-spacing:.16em; color:var(--muted); }
+.project-entry-main { display:grid; grid-template-columns:150px 1fr 35px; gap:35px; align-items:center; margin-top:45px; }
+.project-entry-mark,.home-helios-mark { display:grid; place-items:center; width:125px; aspect-ratio:1; border:1px solid var(--line); border-radius:50%; color:var(--text); font-size:76px; font-weight:300; letter-spacing:-.09em; }
+.project-entry-copy h2 { font-size:clamp(45px,7vw,82px); font-weight:300; }
+.project-entry-copy p { max-width:570px; margin-top:15px; font-size:13px; line-height:2; color:var(--muted); }
+.project-entry-cta { display:inline-flex; gap:15px; margin-top:30px; padding-bottom:8px; border-bottom:1px solid var(--text); font-size:9px; font-weight:600; letter-spacing:.16em; }
+.project-entry-arrow { font-size:25px; color:var(--muted); }
+.projects-note { margin-top:35px; font-size:11px; line-height:1.9; color:var(--muted); }
+.projects-closing { padding:135px 0; }
+.projects-closing h2 { margin-top:45px; font-size:clamp(58px,9vw,105px); }
+.home-projects { padding:135px 0; }
+.home-helios-link { display:grid; grid-template-columns:95px 1fr 30px; gap:28px; align-items:center; margin-top:75px; padding:30px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); transition:padding .25s ease; }
+.home-helios-link:hover { padding-left:12px; }
+.home-helios-mark { width:78px; font-size:46px; }
+.home-helios-copy { display:flex; flex-direction:column; gap:9px; }
+.home-helios-copy strong { font-size:clamp(28px,4vw,43px); font-weight:300; letter-spacing:-.06em; }
+.home-helios-copy > span:last-child { font-size:12px; color:var(--muted); }
+.home-helios-arrow { font-size:22px; }
+
+/* HELIOS PRODUCT PAGE */
+.helios-hero { padding:105px 0 45px; }
+.helios-hero-lockup { display:flex; align-items:center; gap:18px; margin-top:65px; }
+.helios-sunmark { display:grid; place-items:center; width:43px; height:43px; border:1px solid var(--line); border-radius:50%; font-size:23px; font-weight:300; }
+.helios-edition { font-size:9px; letter-spacing:.2em; color:var(--muted); }
+.helios-hero h1 { margin-top:25px; font-size:clamp(82px,16vw,190px); letter-spacing:-.095em; }
+.helios-period { color:var(--white); }
+.helios-tagline { margin-top:20px; font-size:clamp(19px,2.6vw,27px); font-weight:300; letter-spacing:-.035em; }
+.helios-hero-description { max-width:510px; margin-top:22px; font-size:14px; line-height:2; color:var(--muted); }
+.helios-hero-index { display:flex; justify-content:space-between; gap:20px; margin-top:115px; padding-top:18px; border-top:1px solid var(--line); font-size:9px; letter-spacing:.14em; color:var(--muted); }
+.helios-intro,.helios-architecture,.helios-requirements { padding:140px 0; }
+.helios-intro-layout,.helios-architecture-layout,.helios-requirements-layout { display:grid; grid-template-columns:1fr .75fr; gap:85px; margin-top:65px; align-items:start; }
+.helios-intro h2,.helios-architecture h2,.helios-requirements h2 { font-size:clamp(43px,5vw,67px); }
+.helios-body-copy p,.helios-body-copy li { max-width:500px; margin-bottom:22px; font-size:13px; line-height:2; color:var(--muted); }
+.helios-body-copy ul { padding-left:18px; }
+.helios-capabilities { padding:135px 0 145px; }
+.helios-capabilities h2,.helios-safety h2,.helios-download h2 { margin-top:50px; font-size:clamp(45px,6vw,76px); }
+.helios-capability-list { margin-top:80px; border-top:1px solid var(--line); }
+.helios-capability-list article { display:grid; grid-template-columns:65px 1fr; gap:25px; padding:30px 0; border-bottom:1px solid var(--line); }
+.helios-capability-list article > span { padding-top:5px; font-size:9px; letter-spacing:.12em; color:var(--muted); }
+.helios-capability-list h3 { font-size:18px; font-weight:400; letter-spacing:-.03em; }
+.helios-capability-list p { max-width:620px; margin-top:10px; font-size:12px; line-height:1.9; color:var(--muted); }
+.helios-safety { padding:135px 0; }
+.helios-safety-copy { max-width:650px; margin-top:35px; font-size:14px; line-height:2; color:var(--muted); }
+.helios-download { padding:135px 0; }
+.helios-download-copy { max-width:560px; margin-top:25px; font-size:13px; line-height:2; color:var(--muted); }
+.helios-download-panel { display:flex; justify-content:space-between; align-items:center; gap:25px; margin-top:55px; padding:25px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.helios-download-panel > div { display:flex; flex-direction:column; gap:9px; }
+.helios-download-panel strong { font-size:17px; font-weight:400; letter-spacing:.02em; }
+.helios-download-panel span { font-size:10px; letter-spacing:.08em; color:var(--muted); }
+.download-status { white-space:nowrap; font-size:9px !important; letter-spacing:.15em !important; }
+.helios-download-note { max-width:650px; margin-top:22px; font-size:11px; line-height:1.9; color:var(--muted); }
+
+@media (max-width:760px) {
+    .projects-hero,.helios-hero { padding:85px 0 35px; }
+    .projects-hero h1 { font-size:clamp(55px,12vw,85px); }
+    .projects-hero-index,.helios-hero-index { margin-top:85px; font-size:8px; }
+    .projects-intro,.project-directory,.home-projects,.helios-intro,.helios-capabilities,.helios-architecture,.helios-safety,.helios-requirements,.helios-download,.projects-closing { padding:95px 0; }
+    .projects-intro-layout,.home-projects-layout,.helios-intro-layout,.helios-architecture-layout,.helios-requirements-layout { grid-template-columns:1fr; gap:30px; margin-top:45px; }
+    .project-entry-main { grid-template-columns:75px 1fr 20px; gap:18px; margin-top:35px; }
+    .project-entry-mark { width:70px; font-size:42px; }
+    .project-entry-top { font-size:8px; }
+    .project-entry-copy h2 { font-size:48px; }
+    .project-entry-copy p { font-size:12px; }
+    .home-helios-link { grid-template-columns:65px 1fr 18px; gap:16px; margin-top:55px; }
+    .home-helios-mark { width:58px; font-size:34px; }
+    .helios-hero-lockup { margin-top:50px; }
+    .helios-hero h1 { font-size:clamp(76px,18vw,125px); }
+    .helios-download-panel { align-items:flex-start; flex-direction:column; }
+    .helios-capability-list article { grid-template-columns:35px 1fr; gap:15px; }
+}
+
+@media (max-width:400px) {
+    .project-entry-main { grid-template-columns:1fr 20px; }
+    .project-entry-mark { display:none; }
+    .projects-hero-index,.helios-hero-index { flex-direction:column; }
 }

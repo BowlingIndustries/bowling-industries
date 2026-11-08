@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Helios Public is a locally operated, extensible AI assistant from Bowling Industries.">
+    <title>Helios — Bowling Industries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand" aria-label="Bowling Industries home"><img src="assets/logo.svg" alt="Bowling Industries"></a>
+        <p class="brand-motto">FOR A BETTER TOMORROW.</p>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="index.html#about">ABOUT</a>
+            <a href="index.html#research">RESEARCH</a>
+            <a href="index.html#approach">OUR APPROACH</a>
+            <a href="charter.html">CHARTER</a>
+            <a href="projects.html" aria-current="page">PROJECTS</a>
+            <a href="index.html#contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <main class="helios-page">
+        <section class="helios-hero section-blue">
+            <div class="section-inner reveal">
+                <p class="eyebrow">BOWLING INDUSTRIES · BI / RD–001</p>
+                <div class="helios-hero-lockup"><span class="helios-sunmark" aria-hidden="true">H</span><span class="helios-edition">PUBLIC EDITION</span></div>
+                <h1>HELIOS<span class="helios-period">.</span></h1>
+                <p class="helios-tagline">A more personal way to work with AI.</p>
+                <p class="helios-hero-description">A locally operated, voice-first AI assistant designed for natural interaction, practical integrations, and room to make it your own.</p>
+                <a href="#download" class="text-link">EXPLORE THE PUBLIC EDITION <span aria-hidden="true">↘</span></a>
+                <div class="helios-hero-index"><span>LOCAL AI · MODULAR · VOICE-FIRST</span><span>WINDOWS 10 / 11 TESTED</span></div>
+            </div>
+        </section>
+
+        <section class="helios-intro section-light">
+            <div class="section-inner reveal">
+                <p class="eyebrow">INTRODUCING HELIOS</p>
+                <div class="helios-intro-layout">
+                    <h2>Technology that<br>works with you.</h2>
+                    <div class="helios-body-copy">
+                        <p>Helios brings local AI conversation together with voice interaction, persistent context, and connections to supported applications.</p>
+                        <p>The Public Edition is a deliberately scoped version of the assistant, designed to give people useful capabilities while keeping the experience customizable and user-directed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="helios-capabilities section-grey">
+            <div class="section-inner reveal">
+                <p class="eyebrow">CAPABILITIES</p>
+                <h2>More than a<br>conversation window.</h2>
+                <div class="helios-capability-list">
+                    <article><span>01</span><div><h3>Local AI conversation</h3><p>Run supported language models locally through Ollama, keeping the core model interaction on the user's own machine.</p></div></article>
+                    <article><span>02</span><div><h3>Voice-first interaction</h3><p>Speak naturally, use wake-word activation, and interact with Helios without relying solely on typed commands.</p></div></article>
+                    <article><span>03</span><div><h3>Context and memory</h3><p>Maintain conversational context and use supported memory features to make interactions more continuous.</p></div></article>
+                    <article><span>04</span><div><h3>Application integrations</h3><p>Connect supported tools and applications through available integrations and extensions.</p></div></article>
+                    <article><span>05</span><div><h3>Modular extensibility</h3><p>Organize functionality into modules and support third-party extensions, subject to the permissions and safeguards of each extension.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="helios-architecture section-light">
+            <div class="section-inner reveal">
+                <p class="eyebrow">DESIGNED FOR LOCAL USE</p>
+                <div class="helios-architecture-layout">
+                    <h2>Your machine.<br>Your assistant.</h2>
+                    <div class="helios-body-copy">
+                        <p>Helios Public uses a local AI runtime and supported models rather than requiring a hosted AI API for its core language-model interaction.</p>
+                        <p>Ollama is installed separately. The installation guide explains the required setup and model configuration. Features that use the internet or connected applications may still communicate with those services when invoked.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="helios-safety section-blue">
+            <div class="section-inner reveal">
+                <p class="eyebrow">USER CONTROL</p>
+                <h2>Capability with<br>clear boundaries.</h2>
+                <p class="helios-safety-copy">Helios Public is intended to keep users in control of sensitive actions through explicit permission prompts and defined restrictions. Users should review the documentation, understand each integration's permissions, and only install extensions from sources they trust.</p>
+            </div>
+        </section>
+
+        <section class="helios-requirements section-light">
+            <div class="section-inner reveal">
+                <p class="eyebrow">GETTING STARTED</p>
+                <div class="helios-requirements-layout">
+                    <h2>Before you<br>begin.</h2>
+                    <div class="helios-body-copy">
+                        <ul>
+                            <li>Windows 10 or Windows 11 (tested configurations).</li>
+                            <li>Ollama installed separately.</li>
+                            <li>A supported local model configured as described in the included guide.</li>
+                            <li>Python and dependencies installed as specified in the README.</li>
+                        </ul>
+                        <p>Actual performance and model compatibility depend on your computer's hardware and software configuration. Consult the included documentation before installation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="helios-download section-grey" id="download">
+            <div class="section-inner reveal">
+                <p class="eyebrow">HELIOS PUBLIC · DOWNLOAD</p>
+                <h2>Make it yours.</h2>
+                <p class="helios-download-copy">The public release package and installation documentation will be made available here once distribution hosting and release checks are complete.</p>
+                <div class="helios-download-panel">
+                    <div><strong>HELIOS PUBLIC</strong><span>Windows · ZIP package · 1.31 GB (current build)</span></div>
+                    <span class="download-status">RELEASE PREPARATION</span>
+                </div>
+                <p class="helios-download-note">Ollama is not bundled with the current package. Follow the included README for installation and model setup. Review third-party software and model licenses before redistribution.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a href="index.html" class="footer-brand"><img src="assets/logo.svg" alt="Bowling Industries"></a>
+        <p>FOR A BETTER TOMORROW.</p>
+        <a href="projects.html" class="footer-charter-link">BACK TO PROJECTS</a>
+        <a href="charter.html" class="footer-charter-link">OUR FOUNDING CHARTER</a>
+        <span>© <span id="year"></span> BOWLING INDUSTRIES</span>
+    </footer>
+</body>
+</html>
